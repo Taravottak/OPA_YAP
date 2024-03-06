@@ -1,0 +1,35 @@
+import pygame
+from pygame.draw import *
+'''WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GRAY = (125, 125, 125)
+LIGHT_BLUE = (64, 128, 255)
+GREEN = (0, 200, 64)
+YELLOW = (225, 225, 0)
+PINK = (230, 50, 230)'''
+pygame.init()
+
+FPS = 30
+screen = pygame.display.set_mode((400, 400))
+screen.fill((255, 255, 255))
+circle(screen, (225, 225, 0), (200, 175), 100)
+circle(screen, (64, 128, 255), (200, 175), 10)
+circle(screen, (255, 0, 0), (250, 140), 20)
+circle(screen, (255, 0, 0), (150, 140), 20)
+circle(screen, (0, 0, 0), (250, 140), 10)
+circle(screen, (0, 0, 0), (150, 140), 10)
+line(screen, (0, 0, 0), (220, 140),(280,70),20)
+line(screen, (0, 0, 0), (110,70),(190, 140),20)
+line(screen, (0, 0, 0), (160,250),(235, 250),20)
+pygame.display.update()
+clock = pygame.time.Clock()
+finished = False
+
+while not finished:
+    clock.tick(FPS)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            finished = True
+
+pygame.quit()
+
